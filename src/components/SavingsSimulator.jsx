@@ -29,11 +29,15 @@ const SavingsSimulator = () => {
   const handleProjectionClick = () => {
     navigate('/projection', { state: { ahorroMensual } });
   };
+  
+  const handleBackClick = () => {
+    navigate('/');
+  };
 
   return (
     <div className="simulator-container">
       <div className="header">
-        <FaArrowLeft />
+        <FaArrowLeft className="back-arrow" onClick={handleBackClick} />
         <h1>Simulador de ahorro</h1>
       </div>
 
